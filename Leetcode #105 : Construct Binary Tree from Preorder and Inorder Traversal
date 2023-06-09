@@ -1,3 +1,14 @@
+/*
+        Algorithm :
+        1. consider first value of preOrder = root
+        2. Find index of that root in inorder
+        3. all the value on the left side = left tree of that root
+        4. all the values on the right side = right tree of that root 
+        5. slice the arrays and continue process till we build whole tree
+        
+        Can follow same logic if we have given postorder and inorder traversal Or preorder and postorder traversal
+*/
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -13,15 +24,6 @@
  */
 var buildTree = function(preorder, inorder) {
 
-    /*
-        Algorithm :
-        1. consider first value of preOrder = root
-        2. Find index of that root in inorder
-        3. all the value on the left side = left tree of that root
-        4. all the values on the right side = right tree of that root 
-        5. slice the arrays and continue process till we build whole tree
-    */
-    
     if(preorder.length == 1 || inorder.length == 1){
         return {
             val : preorder[0],
