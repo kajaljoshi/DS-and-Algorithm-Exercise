@@ -1,4 +1,4 @@
-#Approach 1 : Find triangle uisng 3 for loops
+// #Approach 1 : Find triangle uisng 3 for loops
 
 var minTrioDegree = function(n, edges) {
     // create an adjacency list of all the edges;
@@ -30,19 +30,19 @@ var minTrioDegree = function(n, edges) {
 };
 
 
-#Approach 2 : Trio with BFS
-1. Make adj list of vertices
-2. start BFS travel of vertices by keeping track of entry time (steps basically)
-3. when processing every edge, there are 4 cases
-  3.1 Case 1 : if we found that vertex is already discovered and entryStep of both vertex is same, and parent of both vertex is same then we have found triangle
-  3.2 Case 2 : if vertex is already found & both are on same level & both share edge from any of the higher level vertices (same potential parents)
-  3.3 Case 3 : if vertex is already found & both are on same level & both share edge from any of the lower level vertices (same child)
-  3.4 Case 4 : if vertex is already found & both are on same level & both share edge with oneof their siblings
-  3.5 calculate degree of current trio by checking number of total edges from vertex - trio edges
-  3.6 always store minDegree
-4. return minDegree
+// #Approach 2 : Trio with BFS
+// 1. Make adj list of vertices
+// 2. start BFS travel of vertices by keeping track of entry time (steps basically)
+// 3. when processing every edge, there are 4 cases
+//   3.1 Case 1 : if we found that vertex is already discovered and entryStep of both vertex is same, and parent of both vertex is same then we have found triangle
+//   3.2 Case 2 : if vertex is already found & both are on same level & both share edge from any of the higher level vertices (same potential parents)
+//   3.3 Case 3 : if vertex is already found & both are on same level & both share edge from any of the lower level vertices (same child)
+//   3.4 Case 4 : if vertex is already found & both are on same level & both share edge with oneof their siblings
+//   3.5 calculate degree of current trio by checking number of total edges from vertex - trio edges
+//   3.6 always store minDegree
+// 4. return minDegree
 
-Code
+// Code
 /**
  * @param {number} n
  * @param {number[][]} edges
