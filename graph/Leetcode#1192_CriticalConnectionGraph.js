@@ -5,7 +5,7 @@
  */
 var criticalConnections = function(n, connections) {
     /**
-        Idea :  if you find cycle in graph then all edges part of that cycle arenot critical connection
+        Idea :  if you find cycle in graph then all edges part of that cycle are not critical connection
         Algorithm :
         1. Create Adjecency List from connection array
         2. start DFS traversal
